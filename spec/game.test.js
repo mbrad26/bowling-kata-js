@@ -7,11 +7,11 @@ describe('Game', () => {
     expect(game).toBeDefined();
   });
 
-  it('responds to #roll', () => {
-    expect(game.roll()).toBe();
-  });
+  it('calculates a getter game', () => {
+    for(let i = 0; i < 20; i++) {
+      game.roll(0);
+    };
 
-  it('responds to #score', () => {
-    expect(game.score()).toBe();
+    expect(game.score()).toEqual(0);
   });
 });
