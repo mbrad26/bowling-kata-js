@@ -10,4 +10,8 @@ describe('Game', () => {
   it('responds to #roll', () => {
     expect(game.roll()).toBe();
   });
+
+  it('responds to #score', () => {
+    expect(game.score()).toBe();
+  });
 });
