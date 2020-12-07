@@ -1,8 +1,13 @@
 const Game = require('../lib/game');
 
 describe('Game', () => {
+  const game = new Game();
+
   it('is defined', () => {
-    const game = new Game();
     expect(game).toBeDefined();
+  });
+
+  it('responds to #roll', () => {
+    expect(game.roll()).toBe();
   });
 });
