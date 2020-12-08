@@ -35,6 +35,6 @@ describe('Game', () => {
     game.roll(8);
     rollMany(17, 0);
 
-    expect(game.score()).toEqual(18)
+    expect(game.score()).toEqual(26);
   });
 });
