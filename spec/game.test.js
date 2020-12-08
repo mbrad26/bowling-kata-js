@@ -34,11 +34,20 @@ describe('Game', () => {
     expect(game.score()).toEqual(20);
   });
 
-  it('keeps track of one spare', () => {
+  it('calculates a spare', () => {
     rollSpare();
     game.roll(8);
     rollMany(17, 0);
 
     expect(game.score()).toEqual(26);
+  });
+
+  it('calculates a strike', () => {
+    game.roll(10);
+    game.roll(3);
+    game.roll(4);
+    rollMany(16, 0);
+
+    expect(game.score()).toEqual(24);
   });
 });
