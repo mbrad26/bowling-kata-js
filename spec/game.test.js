@@ -16,7 +16,11 @@ describe('Game', () => {
   const rollSpare = () => {
     game.roll(7);
     game.roll(3);
-  }
+  };
+
+  const rollStrike = () => {
+    game.roll(10);
+  };
 
   it('is defined', () => {
     expect(game).toBeDefined();
@@ -43,7 +47,7 @@ describe('Game', () => {
   });
 
   it('calculates a strike', () => {
-    game.roll(10);
+    rollStrike(10);
     game.roll(3);
     game.roll(4);
     rollMany(16, 0);
