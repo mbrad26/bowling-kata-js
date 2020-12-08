@@ -28,4 +28,13 @@ describe('Game', () => {
     
     expect(game.score()).toEqual(20);
   });
+
+  it('keeps track of one spare', () => {
+    game.roll(5);
+    game.roll(5);
+    game.roll(8);
+    rollMany(17, 0);
+
+    expect(game.score()).toEqual(18)
+  });
 });
