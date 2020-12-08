@@ -13,6 +13,11 @@ describe('Game', () => {
     };
   };
 
+  const rollSpare = () => {
+    game.roll(7);
+    game.roll(3);
+  }
+
   it('is defined', () => {
     expect(game).toBeDefined();
   });
@@ -30,8 +35,7 @@ describe('Game', () => {
   });
 
   it('keeps track of one spare', () => {
-    game.roll(5);
-    game.roll(5);
+    rollSpare();
     game.roll(8);
     rollMany(17, 0);
 
